@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ReLoop: a simple second-hand marketplace demo." />
+    <title>Guide | ReLoop</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="mystyles.css" />
+    <script src="myapp.js" defer></script>
+  </head>
+  <body data-page="guide">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- The shared navigation is created by initLayout() in myapp.js. -->
+    <header id="site-header" class="site-header"></header>
+    <noscript>
+      <p class="notice">Enable JavaScript to browse, sell, and save purchases.</p>
+    </noscript>
+    <main id="main" class="container">
+      <section class="intro">
+        <h1>How ReLoop works</h1>
+        <p>A simple demo for buying and selling used items.</p>
+      </section>
+      <section class="panel">
+        <h2>Buy an item</h2>
+        <ol>
+          <li>Browse products and read their condition and description.</li>
+          <li>Select Buy now and enter sample contact and collection/delivery details.</li>
+          <li>Open My purchases to edit details, mark received, or cancel before receipt.</li>
+        </ol>
+        <h2>Sell an item</h2>
+        <p>
+          Select Sell, add an honest description and price, then publish. Use My listings to edit,
+          delete, mark sold, or relist it.
+        </p>
+        <h2>Trade carefully</h2>
+        <ul>
+          <li>Meet in a busy public place.</li>
+          <li>Inspect the item before paying.</li>
+          <li>Never share passwords, OTPs, or identity documents.</li>
+          <li>Avoid advance payments to strangers.</li>
+        </ul>
+      </section>
+      <p class="notice">
+        This is a browser-only demo. Data is saved with localStorage on this device. There are no
+        real accounts, payments, deliveries, messages, or moderation services.
+      </p>
+    </main>
+    <!-- The shared footer is also created by initLayout(). -->
+    <footer id="site-footer" class="site-footer"></footer>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  </body>
+</html>

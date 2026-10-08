@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300">
+  <defs>
+    <linearGradient id="cloth" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#819779" />
+      <stop offset="1" stop-color="#526d52" />
+    </linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#b8804e" />
+      <stop offset=".5" stop-color="#dfb17b" />
+      <stop offset="1" stop-color="#b67d4f" />
+    </linearGradient>
+    <linearGradient id="black" x1="0" y1="0" x2=".9" y2="1">
+      <stop stop-color="#5b5c58" />
+      <stop offset="1" stop-color="#202520" />
+    </linearGradient>
+    <linearGradient id="silver">
+      <stop stop-color="#deded9" />
+      <stop offset=".5" stop-color="#a9aba4" />
+      <stop offset="1" stop-color="#d3d5ce" />
+    </linearGradient>
+    <radialGradient id="glass">
+      <stop stop-color="#507378" />
+      <stop offset=".5" stop-color="#243b3e" />
+      <stop offset="1" stop-color="#111e20" />
+    </radialGradient>
+    <filter id="shadow"><feGaussianBlur stdDeviation="5" /></filter>
+    <pattern id="grain" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".55" fill="#fff" opacity=".11" />
+    </pattern>
+  </defs>
+  <rect width="420" height="300" fill="#f0e8d9" />
+  <ellipse cx="218" cy="258" rx="85" ry="8" fill="#54432c" opacity=".12" filter="url(#shadow)" />
+  <ellipse cx="215" cy="245" rx="57" ry="13" fill="#9c8c68" />
+  <ellipse cx="215" cy="240" rx="57" ry="13" fill="#c1b28c" />
+  <path d="m214 237 32-81-45-44" fill="none" stroke="#9a8a64" stroke-width="9" />
+  <path d="m214 234 28-77-44-43" fill="none" stroke="#d9cda8" stroke-width="3" />
+  <circle cx="244" cy="155" r="9" fill="#827658" />
+  <circle cx="244" cy="155" r="4" fill="#cfc19a" />
+  <g transform="rotate(-25 191 102)">
+    <path d="M165 73c0-22 49-22 49 0l24 53h-98Z" fill="#9ba58b" />
+    <ellipse cx="189" cy="126" rx="49" ry="14" fill="#e3d8b4" />
+    <ellipse cx="189" cy="125" rx="33" ry="8" fill="#faf0cb" />
+    <circle cx="189" cy="125" r="10" fill="#fff9df" />
+    <path d="m166 76-19 46" stroke="#b8c1a9" stroke-width="3" fill="none" />
+  </g>
+</svg>

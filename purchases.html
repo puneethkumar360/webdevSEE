@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ReLoop: a simple second-hand marketplace demo." />
+    <title>My purchases | ReLoop</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="mystyles.css" />
+    <script src="myapp.js" defer></script>
+  </head>
+  <body data-page="purchases">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- The shared navigation is created by initLayout() in myapp.js. -->
+    <header id="site-header" class="site-header"></header>
+    <noscript>
+      <p class="notice">Enable JavaScript to browse, sell, and save purchases.</p>
+    </noscript>
+    <main id="main" class="container">
+      <section class="intro">
+        <h1>My purchases</h1>
+        <p>Edit pending purchases, mark received, or cancel.</p>
+      </section>
+      <p class="notice">
+        Demo only: no money is charged, no seller is contacted, and no delivery is arranged. Use
+        sample buyer details; they stay in this browser.
+      </p>
+      <p id="purchase-count" class="muted" aria-live="polite"></p>
+      <!-- renderPurchases() shows saved receipts and the actions for each status. -->
+      <div id="purchases-list" class="record-list"></div>
+      <p id="purchases-empty" class="empty-state" hidden>
+        No purchases yet.
+        <a href="list.html">Browse a product and select Buy now.</a>
+      </p>
+    </main>
+    <!-- The shared footer is also created by initLayout(). -->
+    <footer id="site-footer" class="site-footer"></footer>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  </body>
+</html>

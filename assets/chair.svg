@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300">
+  <defs>
+    <linearGradient id="cloth" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#819779" />
+      <stop offset="1" stop-color="#526d52" />
+    </linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#b8804e" />
+      <stop offset=".5" stop-color="#dfb17b" />
+      <stop offset="1" stop-color="#b67d4f" />
+    </linearGradient>
+    <linearGradient id="black" x1="0" y1="0" x2=".9" y2="1">
+      <stop stop-color="#5b5c58" />
+      <stop offset="1" stop-color="#202520" />
+    </linearGradient>
+    <linearGradient id="silver">
+      <stop stop-color="#deded9" />
+      <stop offset=".5" stop-color="#a9aba4" />
+      <stop offset="1" stop-color="#d3d5ce" />
+    </linearGradient>
+    <radialGradient id="glass">
+      <stop stop-color="#507378" />
+      <stop offset=".5" stop-color="#243b3e" />
+      <stop offset="1" stop-color="#111e20" />
+    </radialGradient>
+    <filter id="shadow"><feGaussianBlur stdDeviation="5" /></filter>
+    <pattern id="grain" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".55" fill="#fff" opacity=".11" />
+    </pattern>
+  </defs>
+  <rect width="420" height="300" fill="#e8e9de" />
+  <ellipse cx="211" cy="258" rx="106" ry="10" fill="#3c4934" opacity=".15" filter="url(#shadow)" />
+  <path d="m148 207-12 52h10l21-49m92-3 17 52h10l-8-61" fill="url(#wood)" />
+  <path d="m113 196 13-81c3-23 21-40 43-42h80c23 2 40 18 43 42l14 81Z" fill="url(#cloth)" />
+  <path d="m134 166 8-52c2-12 12-20 25-21h84c13 1 23 9 25 21l7 52Z" fill="#8ca183" />
+  <path d="m134 166 8-52c2-12 12-20 25-21h84c13 1 23 9 25 21l7 52Z" fill="url(#grain)" />
+  <path d="M129 184c0-13 10-23 23-23h118c13 0 23 10 23 23v19H129Z" fill="#92a487" />
+  <path d="M121 188h182v20c0 10-9 17-19 17H140c-10 0-19-8-19-17Z" fill="#607b59" />
+  <path
+    d="M107 157c1-10 8-16 18-15 9 0 15 6 15 16v51h-27Zm172 1c0-10 6-16 15-16 10-1 17 5 18 15l-6 52h-27Z"
+    fill="#758e6b"
+  />
+  <path d="M153 180h117" fill="none" stroke="#afbea5" stroke-width="2" opacity=".7" />
+  <rect
+    x="181"
+    y="113"
+    width="68"
+    height="49"
+    rx="8"
+    fill="#d3c8ab"
+    transform="rotate(9 215 138)"
+  />
+  <path d="m196 120 45 6m-48 5 46 6m-48 5 46 6" stroke="#baaf93" opacity=".3" />
+</svg>

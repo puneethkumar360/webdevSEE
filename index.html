@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ReLoop: a simple second-hand marketplace demo." />
+    <title>Home | ReLoop</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="mystyles.css" />
+    <script src="myapp.js" defer></script>
+  </head>
+  <body data-page="index">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- The shared navigation is created by initLayout() in myapp.js. -->
+    <header id="site-header" class="site-header"></header>
+    <noscript>
+      <p class="notice">Enable JavaScript to browse, sell, and save purchases.</p>
+    </noscript>
+    <main id="main" class="container">
+      <!-- The banner uses the existing local hero.svg; no external image is needed. -->
+      <section class="intro home-intro">
+        <div class="hero-copy">
+          <p class="eyebrow">A little less new. A lot more possibility.</p>
+          <h1>
+            Good finds.
+            <br />
+            <em>Second chances.</em>
+          </h1>
+          <p>
+            Pre-loved things with plenty of life left. Find your next favourite, or pass something
+            good on.
+          </p>
+          <div class="actions">
+            <a class="button" href="#marketplace">
+              Explore finds
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a class="button button-outline" href="sell.html">Sell an item</a>
+          </div>
+        </div>
+        <figure class="hero-art">
+          <img
+            src="assets/hero.svg"
+            alt="Illustrated reading corner with a chair, lamp, books, and a plant"
+            width="420"
+            height="300"
+          />
+          <figcaption>Useful things deserve another chapter.</figcaption>
+        </figure>
+      </section>
+      <div id="marketplace" class="market-heading">
+        <h2>Find your next favourite.</h2>
+        <p id="result-count" class="muted" aria-live="polite"></p>
+      </div>
+      <!-- These controls are read by renderProducts() to filter the product cards. -->
+      <form id="search-form" class="filters" role="search">
+        <label>
+          Search
+          <input id="search" type="search" placeholder="Search products" />
+        </label>
+        <label>
+          Category
+          <select id="browse-category">
+            <option value="all">All categories</option>
+          </select>
+        </label>
+        <label>
+          City
+          <select id="location">
+            <option value="all">All cities</option>
+          </select>
+        </label>
+        <label>
+          Sort by
+          <select id="sort">
+            <option value="newest">Newest first</option>
+            <option value="low">Lowest price</option>
+            <option value="high">Highest price</option>
+          </select>
+        </label>
+        <button id="reset-filters" class="button-outline" type="button">Clear filters</button>
+      </form>
+      <p class="muted">Demo products are labelled. Select a product to view it or buy it.</p>
+      <!-- JavaScript fills this grid; the HTML for one card is in productCard(). -->
+      <div id="product-grid" class="product-grid"></div>
+      <p id="empty-state" class="empty-state" hidden>
+        No products match. Try clearing the filters.
+      </p>
+    </main>
+    <!-- The shared footer is also created by initLayout(). -->
+    <footer id="site-footer" class="site-footer"></footer>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  </body>
+</html>

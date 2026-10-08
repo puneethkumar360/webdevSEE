@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ReLoop: a simple second-hand marketplace demo." />
+    <title>Product details | ReLoop</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="mystyles.css" />
+    <script src="myapp.js" defer></script>
+  </head>
+  <body data-page="product">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- The shared navigation is created by initLayout() in myapp.js. -->
+    <header id="site-header" class="site-header"></header>
+    <noscript>
+      <p class="notice">Enable JavaScript to browse, sell, and save purchases.</p>
+    </noscript>
+    <main id="main" class="container">
+      <a href="list.html">← Back to browsing</a>
+      <!-- renderDetail() adds the selected product here using the ?id= URL value. -->
+      <div id="product-detail"></div>
+      <!-- An enquiry is a local record; it does not send a message to a seller. -->
+      <dialog id="contact-dialog" aria-labelledby="contact-title">
+        <form id="contact-form">
+          <button type="button" class="dialog-close" data-close-dialog aria-label="Close enquiry">
+            ×
+          </button>
+          <h2 id="contact-title">Contact seller</h2>
+          <p id="contact-product" class="muted"></p>
+          <label for="buyer-name">Your name *</label>
+          <input id="buyer-name" required maxlength="50" />
+          <label for="enquiry">Message *</label>
+          <textarea id="enquiry" required minlength="5" maxlength="800" rows="4">
+Hi! Is this still available?</textarea>
+          <p class="notice">Demo only: no message is sent. Your enquiry stays in this browser.</p>
+          <p id="contact-error" class="form-error" role="alert" hidden></p>
+          <button type="submit">Save enquiry</button>
+        </form>
+      </dialog>
+      <!-- Reports are also local records, shown on My listings. -->
+      <dialog id="report-dialog" aria-labelledby="report-title">
+        <form id="report-form">
+          <button type="button" class="dialog-close" data-close-dialog aria-label="Close report">
+            ×
+          </button>
+          <h2 id="report-title">Report listing</h2>
+          <label for="report-reason">Reason *</label>
+          <select id="report-reason" required>
+            <option value="">Choose a reason</option>
+            <option>Misleading description</option>
+            <option>Suspicious listing or scam</option>
+            <option>Prohibited item</option>
+            <option>Other concern</option>
+          </select>
+          <label for="report-details">Details (optional)</label>
+          <textarea id="report-details" rows="3" maxlength="800"></textarea>
+          <p class="notice">This report stays in this browser. There is no live moderation team.</p>
+          <p id="report-error" class="form-error" role="alert" hidden></p>
+          <button type="submit">Save report</button>
+        </form>
+      </dialog>
+    </main>
+    <!-- The shared footer is also created by initLayout(). -->
+    <footer id="site-footer" class="site-footer"></footer>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  </body>
+</html>

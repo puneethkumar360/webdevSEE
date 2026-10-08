@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ReLoop: a simple second-hand marketplace demo." />
+    <title>Browse | ReLoop</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="mystyles.css" />
+    <script src="myapp.js" defer></script>
+  </head>
+  <body data-page="list">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- The shared navigation is created by initLayout() in myapp.js. -->
+    <header id="site-header" class="site-header"></header>
+    <noscript>
+      <p class="notice">Enable JavaScript to browse, sell, and save purchases.</p>
+    </noscript>
+    <main id="main" class="container">
+      <section class="intro">
+        <h1>Browse products</h1>
+        <p>Search by item, category, or city.</p>
+      </section>
+      <!-- These controls are read by renderProducts() to filter the product cards. -->
+      <form id="search-form" class="filters" role="search">
+        <label>
+          Search
+          <input id="search" type="search" placeholder="Search products" />
+        </label>
+        <label>
+          Category
+          <select id="browse-category">
+            <option value="all">All categories</option>
+          </select>
+        </label>
+        <label>
+          City
+          <select id="location">
+            <option value="all">All cities</option>
+          </select>
+        </label>
+        <label>
+          Sort by
+          <select id="sort">
+            <option value="newest">Newest first</option>
+            <option value="low">Lowest price</option>
+            <option value="high">Highest price</option>
+          </select>
+        </label>
+        <button id="reset-filters" class="button-outline" type="button">Clear filters</button>
+      </form>
+      <p id="result-count" class="muted" aria-live="polite"></p>
+      <p class="muted">Demo products are labelled. Select a product to view it or buy it.</p>
+      <!-- JavaScript fills this grid; the HTML for one card is in productCard(). -->
+      <div id="product-grid" class="product-grid"></div>
+      <p id="empty-state" class="empty-state" hidden>
+        No products match. Try clearing the filters.
+      </p>
+    </main>
+    <!-- The shared footer is also created by initLayout(). -->
+    <footer id="site-footer" class="site-footer"></footer>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  </body>
+</html>

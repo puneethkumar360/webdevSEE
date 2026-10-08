@@ -1,0 +1,766 @@
+/* ReLoop styles. Change the colors below first, then adjust the matching section. */
+:root {
+  --page-bg: #f8f8f4; /* Warm cream background for the whole page */
+  --surface-bg: #ffffff; /* Header, product cards, forms, and dialogs */
+  --text-color: #263c32; /* Normal text and headings */
+  --muted-color: #657166; /* Descriptions, dates, and small hints */
+  --brand-color: #214f40; /* Logo, links, prices, buttons, active menu, and toast */
+  --button-text: #ffffff; /* Text on primary buttons, SOLD labels, and toast */
+  --button-hover: #153b2e; /* Primary button hover color */
+  --backdrop-color: #17372b88; /* Overlay behind open dialogs */
+  --border-color: #e0e5dc; /* Card, field, header, and footer borders */
+  --intro-bg: #e9eee5; /* Home banner; matches the local hero illustration */
+  --notice-bg: #edf2e9; /* Notices, checkout summary, and active menu pill */
+  --accent-color: #80602e; /* Small home-banner label */
+  --danger-color: #9c3b32; /* Errors, delete buttons, and cancelled status text */
+  --danger-bg: #fceeea; /* Errors and cancelled status background */
+  --success-bg: #e2f2e7; /* Received status and selected Save button */
+  --pending-bg: #fff3ce; /* Awaiting collection/delivery status */
+  --focus-color: #9d6a25; /* Keyboard focus outline */
+  --card-radius: 18px; /* Rounded corners for cards, forms, and dialogs */
+  --card-shadow: 0 8px 28px #263c3208; /* Subtle depth below cards and forms */
+  --heading-font: Georgia, 'Times New Roman', serif; /* Editorial page titles */
+}
+
+/* BASIC PAGE: font, page color, readable widths, and spacing. */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--text-color);
+  font:
+    14px/1.65 -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+}
+a {
+  color: var(--brand-color);
+  text-underline-offset: 4px;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+h1,
+h2,
+h3 {
+  font-size: 1rem;
+  letter-spacing: -0.3px;
+  margin: 8px 0 12px;
+}
+h1 {
+  font-family: var(--heading-font);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 400;
+  letter-spacing: -1px;
+  margin: 0 0 12px;
+}
+h2 {
+  font-size: 1.35rem;
+  letter-spacing: -0.4px;
+  margin: 0 0 12px;
+}
+h3 {
+  font-size: 1.1rem;
+  margin: 8px 0;
+}
+p {
+  margin: 0 0 14px;
+}
+[hidden] {
+  display: none !important;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 38px 28px 56px;
+}
+.muted,
+small,
+dt {
+  color: var(--muted-color);
+}
+small {
+  display: block;
+}
+:focus-visible {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 3px;
+}
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -100px;
+}
+.skip-link:focus {
+  top: 8px;
+  background: var(--surface-bg);
+  padding: 8px;
+  z-index: 10;
+}
+
+/* HEADER: white background; the active page uses the green brand color. */
+.site-header {
+  background: var(--surface-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px 26px;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--brand-color);
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  text-decoration: none;
+  line-height: 1;
+}
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+.main-nav a {
+  color: var(--muted-color);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 9px 12px;
+  border-radius: 8px;
+}
+.main-nav a[aria-current='page'] {
+  color: var(--brand-color);
+  background: var(--notice-bg);
+  font-weight: 600;
+}
+.saved-count {
+  font-size: 11px;
+  background: var(--notice-bg);
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+/* INTRODUCTION: sage banner, serif title, and existing local SVG illustration. */
+.intro {
+  margin-bottom: 28px;
+}
+.intro p {
+  color: var(--muted-color);
+  max-width: 600px;
+}
+.home-intro {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 20px;
+  background: var(--intro-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 36px 42px;
+  margin-bottom: 38px;
+}
+
+/* BUTTONS: green primary buttons, white outline buttons, red delete text. */
+button,
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--brand-color);
+  color: var(--button-text);
+  border: 1px solid var(--brand-color);
+  border-radius: 9px;
+  padding: 11px 18px;
+  font: inherit;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 160ms,
+    box-shadow 160ms;
+}
+button:hover,
+.button:hover {
+  background: var(--button-hover);
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+.button-outline,
+.save-button {
+  background: var(--surface-bg);
+  color: var(--brand-color);
+}
+.button-outline:hover,
+.save-button:hover {
+  background: var(--notice-bg);
+}
+.save-button[aria-pressed='true'] {
+  background: var(--brand-color);
+  color: var(--button-text);
+}
+.delete-button {
+  background: transparent;
+  border-color: var(--border-color);
+  color: var(--danger-color);
+}
+.delete-button:hover {
+  background: var(--danger-bg);
+}
+.actions,
+.owner-actions,
+.purchase-actions,
+.detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+/* FORMS AND FILTERS: white fields; --border-color draws their borders. */
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 18px 0 7px;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 11px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 9px;
+  background: var(--surface-bg);
+  color: var(--text-color);
+  font: inherit;
+}
+textarea {
+  resize: vertical;
+}
+.form-card {
+  max-width: 760px;
+  padding: 30px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.checkbox-row {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  font-weight: normal;
+}
+.checkbox-row input {
+  width: 16px;
+  height: 16px;
+  min-height: auto;
+  padding: 0;
+  margin-top: 3px;
+  flex-shrink: 0;
+  accent-color: var(--brand-color);
+}
+.photo-preview {
+  width: 140px;
+  border-radius: 6px;
+  margin-top: 12px;
+}
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 14px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: var(--surface-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+}
+.filters label {
+  flex: 1 1 150px;
+  margin: 0;
+}
+.filters label:first-child {
+  flex-grow: 2;
+}
+.filters input,
+.filters select {
+  margin-top: 6px;
+}
+
+/* PRODUCT CARDS: white surfaces, pale image background, red SOLD label. */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 22px;
+  margin: 24px 0;
+}
+.product-card,
+.form-card,
+.panel,
+.purchase-card,
+.message-card {
+  background: var(--surface-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  overflow-wrap: anywhere;
+}
+.product-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition:
+    box-shadow 160ms,
+    transform 160ms;
+}
+.product-image {
+  position: relative;
+  background: var(--notice-bg);
+}
+.product-image img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.product-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: start;
+  padding: 20px;
+}
+.product-info h3 a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+.product-meta,
+.card-category {
+  font-size: 12px;
+  color: var(--muted-color);
+}
+.product-price,
+.detail-price,
+.purchase-price {
+  color: var(--brand-color);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+.owner-actions {
+  padding: 0 18px 18px;
+}
+.owner-actions button {
+  padding: 7px 10px;
+  font-size: 0.9rem;
+}
+.sold-ribbon {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: var(--danger-color);
+  color: var(--button-text);
+}
+
+/* PRODUCT DETAIL: two columns on desktop, stacked on small screens. */
+.detail-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 42px;
+  align-items: start;
+  margin: 28px 0;
+}
+.detail-photo {
+  position: relative;
+  align-self: start;
+}
+.detail-photo img {
+  width: 100%;
+  border-radius: var(--card-radius);
+  border: 1px solid var(--border-color);
+  background: var(--notice-bg);
+}
+.description {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* PURCHASES AND ENQUIRIES: reuse the same white card instead of many special layouts. */
+.record-list {
+  display: grid;
+  gap: 20px;
+  margin: 20px 0;
+}
+.purchase-card,
+.message-card {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 24px;
+  padding: 26px;
+}
+.purchase-card > img,
+.message-card > img {
+  width: 120px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 6px;
+  background: var(--notice-bg);
+}
+.message-meta {
+  color: var(--muted-color);
+  font-size: 0.85rem;
+}
+.purchase-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 24px;
+  padding: 18px 0;
+  border-top: 1px solid var(--border-color);
+}
+.purchase-details dt {
+  font-size: 0.85rem;
+}
+.purchase-details dd {
+  margin: 0;
+  white-space: pre-wrap;
+}
+.badge {
+  display: inline-block;
+  border-radius: 30px;
+  padding: 5px 11px;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+.purchase-status-placed {
+  background: var(--pending-bg);
+}
+.purchase-status-received {
+  background: var(--success-bg);
+}
+.purchase-status-cancelled {
+  background: var(--danger-bg);
+  color: var(--danger-color);
+}
+.panel {
+  padding: 24px;
+  margin: 24px 0;
+}
+.panel h2:not(:first-child) {
+  margin-top: 24px;
+}
+.report-record {
+  border-top: 1px solid var(--border-color);
+  padding-top: 12px;
+  margin-top: 12px;
+}
+
+/* MESSAGES: pale notices, red errors, green temporary success notifications. */
+.notice,
+.demo-note,
+.purchase-summary {
+  background: var(--notice-bg);
+  color: var(--brand-color);
+  padding: 16px 18px;
+  border-radius: 12px;
+  margin: 18px 0;
+  font-size: 13px;
+}
+.form-error {
+  color: var(--danger-color);
+  background: var(--danger-bg);
+  padding: 12px;
+  border-radius: 6px;
+}
+.empty-state {
+  padding: 32px 20px;
+  text-align: center;
+  border: 1px dashed var(--border-color);
+  border-radius: 8px;
+}
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--brand-color);
+  color: var(--button-text);
+  padding: 14px 20px;
+  border-radius: 6px;
+  max-width: calc(100% - 32px);
+  width: max-content;
+  z-index: 20;
+}
+
+/* DIALOGS: white checkout/enquiry/report forms; translucent dark backdrop. */
+dialog {
+  width: 490px;
+  max-width: calc(100% - 24px);
+  max-height: 90vh;
+  overflow: auto;
+  padding: 32px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--card-radius);
+  box-shadow: 0 24px 80px #17372b33;
+  color: var(--text-color);
+  background: var(--surface-bg);
+}
+dialog::backdrop {
+  background: var(--backdrop-color);
+} /* Darkens the page behind an open dialog. */
+.dialog-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 2px 10px;
+  background: var(--surface-bg);
+  color: var(--text-color);
+  border: 0;
+  font-size: 1.5rem;
+}
+.dialog-close:hover {
+  background: var(--notice-bg);
+}
+
+/* FOOTER: muted text with a light border. */
+.site-footer {
+  color: var(--muted-color);
+  border-top: 1px solid var(--border-color);
+  padding: 28px;
+  font-size: 12px;
+}
+
+/* SMALL SHARED DETAILS: the logo mark, hero copy, and section labels. */
+.brand-mark {
+  font-size: 36px;
+  font-weight: 400;
+}
+.brand-dot {
+  color: var(--accent-color);
+  margin-left: -7px;
+}
+.main-nav a:hover {
+  background: var(--notice-bg);
+  color: var(--brand-color);
+}
+.main-nav .nav-sell,
+.main-nav .nav-sell[aria-current='page'] {
+  background: var(--brand-color);
+  color: var(--button-text);
+}
+.main-nav .nav-sell:hover {
+  background: var(--button-hover);
+}
+.intro .eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  margin-bottom: 16px;
+}
+.hero-copy h1 {
+  font-size: clamp(2.6rem, 4.5vw, 3.7rem);
+  line-height: 1.08;
+  letter-spacing: -1.8px;
+}
+.hero-copy h1 em {
+  color: var(--brand-color);
+  font-weight: 400;
+}
+.hero-copy > p:not(.eyebrow) {
+  max-width: 340px;
+  margin: 20px 0;
+  font-size: 15px;
+}
+.hero-copy .actions {
+  margin-top: 24px;
+}
+.hero-art {
+  margin: 0;
+}
+.hero-art img {
+  width: 100%;
+  height: auto;
+  max-width: 420px;
+  margin: auto;
+}
+.hero-art figcaption {
+  text-align: center;
+  color: var(--muted-color);
+  font-size: 11px;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+}
+.market-heading {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  scroll-margin-top: 20px;
+}
+.market-heading h2 {
+  margin: 0;
+}
+.market-heading p {
+  margin: 0;
+  font-size: 12px;
+}
+.product-card:hover {
+  box-shadow: 0 12px 30px #263c3212;
+  transform: translateY(-3px);
+}
+.product-info .save-button {
+  margin-top: auto;
+  padding: 7px 13px;
+  font-size: 12px;
+  border-radius: 30px;
+}
+.product-meta {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+}
+.listing-type {
+  font-size: 10px;
+  padding: 3px 6px;
+  border-radius: 4px;
+  background: var(--notice-bg);
+  color: var(--brand-color);
+}
+.detail-price {
+  font-size: 2rem;
+}
+.form-card > label:first-child {
+  margin-top: 0;
+}
+.footer-inner {
+  max-width: 1144px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px 24px;
+}
+.footer-inner .brand {
+  font-size: 24px;
+}
+.footer-note {
+  max-width: 1144px;
+  margin: 22px auto 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+  font-size: 11px;
+}
+
+/* SMALL SCREENS: one breakpoint handles forms, product detail, and receipt cards. */
+@media (max-width: 600px) {
+  .container,
+  .header-inner {
+    padding: 20px 16px;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  .home-intro,
+  .form-card,
+  .panel {
+    padding: 20px;
+  }
+  .home-intro,
+  .form-row,
+  .detail-layout,
+  .purchase-details {
+    grid-template-columns: 1fr;
+  }
+  .form-row {
+    gap: 0;
+  }
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .product-image img {
+    aspect-ratio: 1;
+  }
+  .product-info,
+  .owner-actions {
+    padding: 12px;
+  }
+  .product-info h3 {
+    font-size: 0.95rem;
+  }
+  .hero-art img {
+    max-width: 280px;
+  }
+  .hero-copy h1 {
+    font-size: 2.8rem;
+  }
+  .main-nav {
+    gap: 4px;
+  }
+  .main-nav a {
+    padding: 7px 8px;
+    font-size: 12px;
+  }
+  .filters {
+    padding: 16px;
+  }
+  .product-meta {
+    flex-wrap: wrap;
+  }
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+  .purchase-card,
+  .message-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .purchase-card > img,
+  .message-card > img {
+    width: 90px;
+  }
+  dialog {
+    padding: 24px 18px;
+  }
+}
+
+/* Respect the device setting for people who prefer less animation. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}

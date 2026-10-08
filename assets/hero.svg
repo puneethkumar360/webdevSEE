@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300">
+  <defs>
+    <linearGradient id="cloth" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#819779" />
+      <stop offset="1" stop-color="#526d52" />
+    </linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#b8804e" />
+      <stop offset=".5" stop-color="#dfb17b" />
+      <stop offset="1" stop-color="#b67d4f" />
+    </linearGradient>
+    <linearGradient id="black" x1="0" y1="0" x2=".9" y2="1">
+      <stop stop-color="#5b5c58" />
+      <stop offset="1" stop-color="#202520" />
+    </linearGradient>
+    <linearGradient id="silver">
+      <stop stop-color="#deded9" />
+      <stop offset=".5" stop-color="#a9aba4" />
+      <stop offset="1" stop-color="#d3d5ce" />
+    </linearGradient>
+    <radialGradient id="glass">
+      <stop stop-color="#507378" />
+      <stop offset=".5" stop-color="#243b3e" />
+      <stop offset="1" stop-color="#111e20" />
+    </radialGradient>
+    <filter id="shadow"><feGaussianBlur stdDeviation="5" /></filter>
+    <pattern id="grain" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".55" fill="#fff" opacity=".11" />
+    </pattern>
+  </defs>
+  <rect width="420" height="300" fill="#e9eee5" />
+  <circle cx="241" cy="136" r="133" fill="#dce5d5" />
+  <path d="M25 262h394" stroke="#bac8ae" stroke-width="1" />
+  <ellipse cx="224" cy="271" rx="155" ry="16" fill="#c9d3bf" opacity=".4" />
+  <path d="M319 241V65" stroke="#9e9b7b" stroke-width="5" />
+  <ellipse cx="319" cy="244" rx="25" ry="6" fill="#a9a58a" />
+  <path d="m283 63 12-35h48l12 35Z" fill="#c9ba91" />
+  <ellipse cx="319" cy="64" rx="36" ry="6" fill="#e0d5af" />
+  <path d="M304 31h6l-7 28h-9Z" fill="#e1d6b3" opacity=".5" />
+  <g transform="translate(-17 9) scale(.95)">
+    <ellipse
+      cx="211"
+      cy="258"
+      rx="106"
+      ry="10"
+      fill="#3c4934"
+      opacity=".15"
+      filter="url(#shadow)"
+    />
+    <path d="m148 207-12 52h10l21-49m92-3 17 52h10l-8-61" fill="url(#wood)" />
+    <path d="m113 196 13-81c3-23 21-40 43-42h80c23 2 40 18 43 42l14 81Z" fill="url(#cloth)" />
+    <path d="m134 166 8-52c2-12 12-20 25-21h84c13 1 23 9 25 21l7 52Z" fill="#8ca183" />
+    <path d="m134 166 8-52c2-12 12-20 25-21h84c13 1 23 9 25 21l7 52Z" fill="url(#grain)" />
+    <path d="M129 184c0-13 10-23 23-23h118c13 0 23 10 23 23v19H129Z" fill="#92a487" />
+    <path d="M121 188h182v20c0 10-9 17-19 17H140c-10 0-19-8-19-17Z" fill="#607b59" />
+    <path
+      d="M107 157c1-10 8-16 18-15 9 0 15 6 15 16v51h-27Zm172 1c0-10 6-16 15-16 10-1 17 5 18 15l-6 52h-27Z"
+      fill="#758e6b"
+    />
+    <path d="M153 180h117" fill="none" stroke="#afbea5" stroke-width="2" opacity=".7" />
+    <rect
+      x="181"
+      y="113"
+      width="68"
+      height="49"
+      rx="8"
+      fill="#d3c8ab"
+      transform="rotate(9 215 138)"
+    />
+    <path d="m196 120 45 6m-48 5 46 6m-48 5 46 6" stroke="#baaf93" opacity=".3" />
+  </g>
+  <g>
+    <path d="M338 230h45l-6 36h-33Z" fill="#c49c79" />
+    <ellipse cx="360" cy="230" rx="23" ry="5" fill="#a68162" />
+    <path
+      d="m359 231 3-105m-2 67-25-30m26 10 25-31m-27 59 28-13"
+      fill="none"
+      stroke="#6b7e4d"
+      stroke-width="3"
+    />
+    <path
+      d="M362 160c-21-6-25-26-13-36 17 11 17 23 13 36m-11 21c-23-2-35-18-28-30 20 3 28 13 28 30m13-9c0-25 16-38 28-34 1 22-12 33-28 34m-2 33c5-20 25-27 32-17-8 17-17 21-32 17m-1-65c7-22 6-40-9-45-12 17-8 30 9 45"
+      fill="#73905b"
+    />
+    <path
+      d="M362 160c-21-6-25-26-13-36m15 48c0-25 16-38 28-34"
+      fill="none"
+      stroke="#90a679"
+      stroke-width="1.5"
+    />
+  </g>
+  <g transform="rotate(-5 83 262)">
+    <rect x="43" y="250" width="71" height="10" rx="2" fill="#b9795e" />
+    <rect x="46" y="242" width="67" height="9" rx="2" fill="#f0e6cb" />
+    <rect x="41" y="233" width="71" height="10" rx="2" fill="#69816a" />
+  </g>
+  <path d="M67 91v10m-5-5h10m299 10v9m-5-5h10" stroke="#a4b097" stroke-width="1.5" />
+  <circle cx="90" cy="50" r="3" fill="#b7c4a9" />
+  <circle cx="298" cy="196" r="2" fill="#a3b396" />
+</svg>

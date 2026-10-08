@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300">
+  <defs>
+    <linearGradient id="cloth" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#819779" />
+      <stop offset="1" stop-color="#526d52" />
+    </linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#b8804e" />
+      <stop offset=".5" stop-color="#dfb17b" />
+      <stop offset="1" stop-color="#b67d4f" />
+    </linearGradient>
+    <linearGradient id="black" x1="0" y1="0" x2=".9" y2="1">
+      <stop stop-color="#5b5c58" />
+      <stop offset="1" stop-color="#202520" />
+    </linearGradient>
+    <linearGradient id="silver">
+      <stop stop-color="#deded9" />
+      <stop offset=".5" stop-color="#a9aba4" />
+      <stop offset="1" stop-color="#d3d5ce" />
+    </linearGradient>
+    <radialGradient id="glass">
+      <stop stop-color="#507378" />
+      <stop offset=".5" stop-color="#243b3e" />
+      <stop offset="1" stop-color="#111e20" />
+    </radialGradient>
+    <filter id="shadow"><feGaussianBlur stdDeviation="5" /></filter>
+    <pattern id="grain" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".55" fill="#fff" opacity=".11" />
+    </pattern>
+  </defs>
+  <rect width="420" height="300" fill="#e3e7ed" />
+  <ellipse cx="212" cy="248" rx="130" ry="9" fill="#34404e" opacity=".13" filter="url(#shadow)" />
+  <g transform="translate(13 -38) rotate(-12 200 185)">
+    <path d="M97 175c10-4 15-26 23-39l31 17 38 18 93 17c25 5 48 17 49 32H93Z" fill="#f3f1e6" />
+    <path d="m123 137 17 36 41 16 101 14" fill="none" stroke="#c4cbc5" stroke-width="13" />
+    <path d="M93 212h238v13c-68 8-165 8-242 0Z" fill="#dadbd0" />
+    <path d="m174 174 47 12m-55-4 45 12m-56-3 46 12" stroke="#fefdf6" stroke-width="5" />
+    <path d="m220 197 38-10" stroke="#65806d" stroke-width="9" />
+    <path d="M113 214h211" stroke="#b9c5b9" stroke-width="2" />
+  </g>
+  <g transform="rotate(7 201 201)">
+    <path d="M85 192c10-4 15-26 23-39l31 17 38 18 99 17c25 5 48 17 49 32H81Z" fill="#faf7ec" />
+    <path d="m111 154 17 36 41 16 105 14" fill="none" stroke="#cad0c7" stroke-width="13" />
+    <path d="M81 229h244v13c-68 8-171 8-248 0Z" fill="#e0e0d2" />
+    <path d="m162 191 47 12m-55-4 45 12m-56-3 46 12" stroke="#fffdf3" stroke-width="5" />
+    <path d="m208 214 38-10" stroke="#65806d" stroke-width="9" />
+    <path d="M101 231h217" stroke="#c2cabd" stroke-width="2" />
+  </g>
+</svg>

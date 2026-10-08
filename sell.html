@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ReLoop: a simple second-hand marketplace demo." />
+    <title>Sell an item | ReLoop</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="mystyles.css" />
+    <script src="myapp.js" defer></script>
+  </head>
+  <body data-page="sell">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- The shared navigation is created by initLayout() in myapp.js. -->
+    <header id="site-header" class="site-header"></header>
+    <noscript>
+      <p class="notice">Enable JavaScript to browse, sell, and save purchases.</p>
+    </noscript>
+    <main id="main" class="container">
+      <a href="list.html">← Back to browsing</a>
+      <section class="intro">
+        <h1 id="sell-title">Sell an item</h1>
+        <p>Add the details below. Fields marked * are required.</p>
+      </section>
+      <!-- Field IDs match the names in LISTING_FIELDS in myapp.js. -->
+      <form id="sell-form" class="form-card">
+        <label for="title">Product title *</label>
+        <input id="title" required maxlength="80" placeholder="e.g. Wooden study desk" />
+        <div class="form-row">
+          <div>
+            <label for="category">Category *</label>
+            <select id="category" required>
+              <option value="">Choose a category</option>
+            </select>
+          </div>
+          <div>
+            <label for="condition">Condition *</label>
+            <select id="condition" required>
+              <option value="">Choose condition</option>
+              <option>Like new</option>
+              <option>Good</option>
+              <option>Fair</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label for="price">Price (₹) *</label>
+            <input id="price" type="number" min="1" max="10000000" step="1" required />
+          </div>
+          <div>
+            <label for="city">City *</label>
+            <input id="city" required maxlength="50" />
+          </div>
+        </div>
+        <label for="description">Description and defects *</label>
+        <textarea
+          id="description"
+          rows="4"
+          required
+          minlength="15"
+          maxlength="1200"
+          placeholder="Age, condition, included items, and any defects"
+        ></textarea>
+        <small>Use at least 15 characters.</small>
+        <label for="photo">Photo (optional)</label>
+        <input id="photo" type="file" accept="image/jpeg,image/png,image/webp" />
+        <small>JPG, PNG, or WebP, up to 2 MB. A category illustration is used if skipped.</small>
+        <img id="photo-preview" class="photo-preview" alt="Selected product photo" hidden />
+        <label for="seller">Your name *</label>
+        <input id="seller" required maxlength="50" />
+        <label class="checkbox-row">
+          <input id="honesty" type="checkbox" required />
+          I have described the item honestly, including defects.
+        </label>
+        <p id="form-error" class="form-error" role="alert" hidden></p>
+        <div class="actions">
+          <button id="submit-listing" type="submit">Publish listing</button>
+          <a href="mylistings.html">Cancel</a>
+        </div>
+      </form>
+      <p class="notice">
+        Browser demo: this listing stays on this device. Use a public place for any real meetup.
+      </p>
+    </main>
+    <!-- The shared footer is also created by initLayout(). -->
+    <footer id="site-footer" class="site-footer"></footer>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  </body>
+</html>
